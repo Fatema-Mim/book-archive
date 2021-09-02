@@ -3,7 +3,7 @@ const searchButton = ()=>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value ;
     searchField.value = '';
-    const searchUrl = `http://openlibrary.org/search.json?q=${searchText}`;
+    const searchUrl = `https://openlibrary.org/search.json?q=${searchText}`;
     fetch(searchUrl)
     .then(response => response.json())
     .then(data => displayBook(data.docs))
